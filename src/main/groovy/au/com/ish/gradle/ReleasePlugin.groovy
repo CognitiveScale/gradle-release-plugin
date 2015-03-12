@@ -61,7 +61,7 @@ class ReleasePlugin implements Plugin<Project> {
                 }
 
                 if (getSCMService().localIsAheadOfRemote()) {
-                    throw new GradleException('Project contains changed which are not pushed to the remote repository.');
+                    throw new GradleException('Project contains changes which are not pushed to the remote repository.');
                 }
 
                 if (! getSCMService().onTag()) {
